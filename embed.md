@@ -7,7 +7,7 @@ Go source files that import "embed" can use the `//go:embed` **compiler directiv
 
 Three ways to embed a file named `hello.txt `and then print its contents at run time.
 
-## Embedding one file into a string:
+## Embed one file into a string:
 
 ```go
 import _ "embed"
@@ -17,7 +17,7 @@ var s string
 print(s)
 ```
 
-## Embedding one file into a slice of bytes:
+## Embed one file into a slice of bytes:
 
 ```go
 import _ "embed"
@@ -27,7 +27,7 @@ var b []byte
 print(string(b))
 ```
 
-## Embedded multiple files or even folders with wildcards:
+## Embed multiple files and folders with wildcards:
 
 This uses a variable of the `embed.FS` type, which implements a simple **virtual file system**.
 
